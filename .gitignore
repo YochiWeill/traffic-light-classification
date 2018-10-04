@@ -2,7 +2,7 @@
 .vscode
 
 # Model and Data
-data/
+*.record
 models/
 tensorflow/
 
