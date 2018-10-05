@@ -8,12 +8,12 @@
         - ### Start Docker
             - #### With Out GPU
                 ```
-                docker run --name carnd -it -v $PWD:/mnt -p 8888:8888 -w /mnt tensorflow/tensorflow:1.4.0-py3
+                docker run --name carnd -it -v $PWD:/mnt -p 8888:8888 -w /mnt tensorflow/tensorflow:1.3.0-py3
                 ```
             - #### With Nvidia GPU (recommended)
                 Install [Nvidia Docker](https://github.com/NVIDIA/nvidia-docker)
                 ```
-                docker run --name carnd --runtime=nvidia -it -v $PWD:/mnt -p 8888:8888 -w /mnt tensorflow/tensorflow:1.4.0-gpu-py3
+                docker run --name carnd --runtime=nvidia -it -v $PWD:/mnt -p 8888:8888 -w /mnt tensorflow/tensorflow:1.3.0-gpu-py3
                 ```
         - ### Prepare model
             - ####  Using this cmd to open an new shell of the docker container and run following cmd in this docker shell
