@@ -60,6 +60,7 @@
 ## Download Dataset
 - [Vatsal's dataset](https://github.com/coldKnight/TrafficLight_Detection-TensorFlowAPI#get-the-dataset)
 - [Alex's dataset](https://www.dropbox.com/s/vaniv8eqna89r20/alex-lechner-udacity-traffic-light-dataset.zip?dl=0)
+- [Bosch Small Traffic Lights Dataset](https://hci.iwr.uni-heidelberg.de/node/6132): specially the dataset_test_rgb.zip.001
 
 Put record file in the data folder
 
