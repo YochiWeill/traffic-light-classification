@@ -55,7 +55,7 @@
     
 2. Open 127.0.0.1:8888 in a browser
 
-# Data prepare
+# Data preparetion
 
 ## Download Dataset
 - [Vatsal's dataset](https://github.com/coldKnight/TrafficLight_Detection-TensorFlowAPI#get-the-dataset)
@@ -64,9 +64,26 @@
 
 Put record file in the data folder
 
-## Download Models
+## Downloading  Models for Transfer Learning
+Training a state of the art object detector from scratch can take days, even when using multiple GPUs! In order to speed up training, we'll take an object detector trained on a different dataset (COCO), and reuse some of it's parameters to initialize our new model.
+
 Download and extract to models folder
 - [SSD Inception V2 Coco (17/11/2017)](http://download.tensorflow.org/models/object_detection/ssd_inception_v2_coco_2017_11_17.tar.gz)
+
+Download  [COCO-pretrained Faster R-CNN with Resnet-101
+model](http://storage.googleapis.com/download.tensorflow.org/models/object_detection/faster_rcnn_resnet101_coco_11_06_2017.tar.gz).
+Unzip the contents of the folder and copy the `model.ckpt*` files into your GCS
+Bucket.
+
+``` bash
+wget http://storage.googleapis.com/download.tensorflow.org/models/object_detection/faster_rcnn_resnet101_coco_11_06_2017.tar.gz
+tar -xvf faster_rcnn_resnet101_coco_11_06_2017.tar.gz
+gsutil cp faster_rcnn_resnet101_coco_11_06_2017/model.ckpt.* gs://${YOUR_GCS_BUCKET}/data/
+```
+
+Remember the path where you uploaded the model checkpoint to, as we will need it
+in the next steps.
+[Source](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_pets.md)
 
 # Train
 Run cmd in the docker shell
