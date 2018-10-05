@@ -31,18 +31,18 @@
                 mkdir tensorflow
                 cd tensorflow
                 git clone https://github.com/tensorflow/models.git
+                cd models
                 git checkout f7e99c0
                 ```
             2. ## Prepare
                 ```
-                cd /mnt
-                protoc tensorflow/models/research/object_detection/protos/*.proto --python_out=.
+                cd research
+                protoc object_detection/protos/*.proto --python_out=.
                 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
                 ```
             3. ## Test
                 ```
-                cd /mnt
-                python tensorflow/models/research/object_detection/builders/model_builder_test.py
+                python object_detection/builders/model_builder_test.py
                 ```
         
     - ## Not first run
