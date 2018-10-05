@@ -1,7 +1,7 @@
 # Setup Enviroment
 ## Clone this project
 
-## Using Docer
+## Using Docker
 
 1. Run the command in the project root folder to start docker 
     - ## For the first run:
