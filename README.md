@@ -1,8 +1,13 @@
 # Setup Enviroment
 ## Clone this project
 
+<<<<<<< HEAD
 ## Using Docer
 **Note: In order to freeze the graph, we need tensorflow 1.4.0 here, 1.4.0 will be compatible with 1.3.0, you can train with 1.3.0 and freeze with 1.4.0 or you can do both with 1.4.0**
+=======
+## Using Docker
+
+>>>>>>> 8485a3daba3fc92aebb18340d39a2cdc22bf78ff
 1. Run the command in the project root folder to start docker 
     - ## For the first run:
         - ### Start Docker
