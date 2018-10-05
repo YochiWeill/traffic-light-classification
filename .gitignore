@@ -117,3 +117,14 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+data/
+tf_records_data/
+train_out/
+eval_out/
+utils/
+test_images_sim/
+frozen_out/
+.vs/
+faster_rcnn_resnet101_coco_11_06_2017
+test_images/
