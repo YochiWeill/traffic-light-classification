@@ -66,25 +66,30 @@ Put record file in the data folder
 
 ## Download Models
 Download and extract to models folder
-- [SSD Inception V2 Coco (17/11/2017)](http://download.tensorflow.org/models/object_detection/ssd_inception_v2_coco_2017_11_17.tar.gz)
+- [Faster RCNN Inception V2 Coco (28/01/2018)](http://download.tensorflow.org/models/object_detection/faster_rcnn_inception_v2_coco_2018_01_28.tar.gz)
 
 # Train
 Run cmd in the docker shell
 - ## sim
     ```
-    python train.py --logtostderr --train_dir=train/ssd/sim --pipeline_config_path=config/ssd_inception_v2_coco_sim.config
+    python train.py --logtostderr --train_dir=train/frcnn_inception/sim --pipeline_config_path=config/faster_rcnn_inception_v2_coco_sim.config
     ```
 
 - ## real
     ```
-    python train.py --logtostderr --train_dir=train/ssd/real --pipeline_config_path=config/ssd_inception_v2_coco_real.config
+    python train.py --logtostderr --train_dir=train/frcnn_inception/real --pipeline_config_path=config/faster_rcnn_inception_v2_coco_real.config
     ```
 
 # Freezing The Graph
 
 - ## sim
     ```
-    python export_inference_graph.py --input_type image_tensor --pipeline_config_path config/ssd_inception_v2_coco_sim.config --trained_checkpoint_prefix train/ssd/sim/model.ckpt-4195 --output_directory models/ssd/sim
+    python export_inference_graph.py --input_type image_tensor --pipeline_config_path config/faster_rcnn_inception_v2_coco_sim.config --trained_checkpoint_prefix train/frcnn_inception/sim/model.ckpt-20000 --output_directory models/frcnn_inception/sim
+    ```
+
+- ## real
+    ```
+    python export_inference_graph.py --input_type image_tensor --pipeline_config_path config/faster_rcnn_inception_v2_coco_real.config --trained_checkpoint_prefix train/frcnn_inception/real/model.ckpt-20000 --output_directory models/frcnn_inception/real
     ```
 
 # References
