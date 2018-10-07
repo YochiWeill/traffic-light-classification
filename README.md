@@ -10,6 +10,29 @@ https://github.com/bosch-ros-pkg/bstld
 ```bash
 docker run -it --rm -v $PWD:/traffic_light_detection -w /traffic_light_detection tensorflow/tensorflow:1.3.0-gpu-py3 bash
 ```
+## Access the docker container
+If you need a second access to the docker container:
+
+1. Get the container id first:
+```
+docker ps
+```
+
+2. Use that id:
+```
+docker exec <id from step 1> -t bash
+```
+## Update your settings
+
+1. System updates
+```
+apt-get install libsm6 libxrender1 libfontconfig1
+```
+
+2 Python packages updates
+```
+pip install -r pip-requirements
+```
 
 
 
