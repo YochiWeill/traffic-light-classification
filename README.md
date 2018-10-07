@@ -13,7 +13,7 @@ git submodule update
 ## Using Docker
 
 ```bash
-docker run -it --rm -v $PWD:/traffic_light_detection -w /traffic_light_detection tensorflow/tensorflow:1.3.0-gpu-py3 bash
+docker run --runtime=nvidia  -it --rm -v $PWD:/traffic_light_detection -w /traffic_light_detection tensorflow/tensorflow:1.3.0-gpu-py3 bash
 ```
 ## Access the docker container
 If you need a second access to the docker container:
@@ -25,7 +25,7 @@ docker ps
 
 2. Use that id:
 ```
-docker exec <id from step 1> -t bash
+docker exec <id from step 1> -it bash
 ```
 ## Update your settings
 
@@ -72,3 +72,18 @@ data
 ├── test.yaml
 └── train.yaml
 ```
+
+## Convert the dataset into a TFRecord
+Create a docker container with the latest Tensorflow. It will be required only to convert the dataset into the required tool
+
+https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/using_your_own_dataset.md
+
+```
+git init <repo>
+cd <repo>
+git config core.sparsecheckout true
+echo "research/object_detection/utils" >> .git/info/sparse-checkout
+git remote add origin  https://github.com/tensorflow/models
+git pull --depth=1 origin master
+```
+then move the `utils` folder to your root folder (the root of this readme file). 
