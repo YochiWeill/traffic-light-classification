@@ -25,7 +25,7 @@ docker ps
 
 2. Use that id:
 ```
-docker exec <id from step 1> -it bash
+docker exec -it <id from step 1> bash
 ```
 ## Update your settings
 
