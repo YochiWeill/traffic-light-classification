@@ -3,7 +3,12 @@ This repository is using helper tools to extract and work with the Bosch Small T
 https://github.com/bosch-ros-pkg/bstld
 
 # Setup Enviroment
-## Clone this project
+Clone this project or update it by pulling all changes. Install the submodules:
+```
+cd bstld
+git submodule init
+git submodule update
+```
 
 ## Using Docker
 
