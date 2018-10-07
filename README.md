@@ -1,7 +1,7 @@
 # Setup Enviroment
 ## Clone this project
 
-## Using Docer
+## Using Docker
 **Note: In order to freeze the graph, we need tensorflow 1.4.0 here, 1.4.0 will be compatible with 1.3.0, you can train with 1.3.0 and freeze with 1.4.0 or you can do both with 1.4.0**
 
 1. Run the command in the project root folder to start docker 
@@ -84,7 +84,12 @@ Run cmd in the docker shell
 
 - ## sim
     ```
-    python export_inference_graph.py --input_type image_tensor --pipeline_config_path config/ssd_inception_v2_coco_sim.config --trained_checkpoint_prefix train/ssd/sim/model.ckpt-4195 --output_directory models/ssd/sim
+    python export_inference_graph.py --input_type image_tensor --pipeline_config_path config/ssd_inception_v2_coco_sim.config --trained_checkpoint_prefix train/ssd/sim/model.ckpt-20000 --output_directory models/ssd/sim
+    ```
+    
+- ## real
+    ```
+    python export_inference_graph.py --input_type image_tensor --pipeline_config_path config/ssd_inception_v2_coco_real.config --trained_checkpoint_prefix train/ssd/real/model.ckpt-20000 --output_directory models/ssd/real
     ```
 
 # References
