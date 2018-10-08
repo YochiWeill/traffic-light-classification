@@ -13,7 +13,7 @@ git submodule update
 ## Using Docker
 
 ```bash
-docker run --runtime=nvidia  -it --rm -v $PWD:/traffic_light_detection -w /traffic_light_detection tensorflow/tensorflow:1.3.0-gpu-py3 bash
+docker run --runtime=nvidia  -it --rm -p 8889:8888 -p 6007:6006 -v $PWD:/traffic_light_detection -w /traffic_light_detection tensorflow/tensorflow:1.3.0-gpu-py3 bash
 ```
 ## Access the docker container
 If you need a second access to the docker container:

@@ -128,3 +128,4 @@ frozen_out/
 .vs/
 faster_rcnn_resnet101_coco_11_06_2017
 test_images/
+*.pb
